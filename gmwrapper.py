@@ -264,7 +264,7 @@ class _Base(object):
 
 		for path in paths:
 			if not isinstance(path, unicode):
-				path = path.decode('utf8')
+				path = path.encode('utf8')
 
 			if os.path.isdir(path):
 				for dirpath, dirnames, filenames in os.walk(path):
